@@ -1,0 +1,252 @@
+:root {
+    /* Definición de colores como variables CSS */
+    --color-principal: rgb(255, 196, 59);
+    --color-secundario: rgb(255, 223, 148);
+    --color-navegador: rgb(255, 198, 0);
+    --color-detalles: rgb(5, 46, 0);
+}
+
+body {
+    margin: 0; /* Elimina margen predeterminado del body */
+    font-family: "Bangers", system-ui; /* Fuente del cuerpo */
+    background-color: var(--color-secundario); /* Color de fondo */
+    display: grid; /* Utiliza grid para el layout */
+    grid-template-rows: auto 1fr auto; /* Filas para el header, contenido y footer */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la vista */
+}
+
+/* Estilos Header */
+.header {
+    background-color: var(--color-principal); /* Color de fondo del header */
+    padding: 10px 20px; /* Espaciado interno del header */
+    display: flex; /* Utiliza flexbox para el layout del header */
+    align-items: center; /* Centra verticalmente los elementos del header */
+    justify-content: space-between; /* Espacia elementos entre sí */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 5px 8px var(--color-detalles); /* Sombra del header */
+}
+
+.header__content {
+    display: flex; /* Flexbox para el contenido del header */
+    align-items: center; /* Centra verticalmente el contenido */
+    flex: 1; /* Permite que el contenido ocupe el espacio disponible */
+    justify-content: space-between; /* Espacio entre elementos del contenido */
+}
+
+.header__logo {
+    height: 50px; /* Altura del logo */
+}
+
+.header__titulo {
+    color: var(--color-detalles); /* Color del título */
+    margin: 0 10px; /* Margen lateral */
+    text-align: center; /* Centra el texto */
+    flex: 1; /* Permite que el título ocupe el espacio disponible */
+    font-size: 30px; /* Tamaño de la fuente */
+}
+
+.header__nav {
+    display: flex; /* Flexbox para la navegación */
+    justify-content: flex-end; /* Alinea los links a la derecha */
+}
+
+.header__nav-link {
+    color: var(--color-detalles); /* Color de los links de navegación */
+    text-decoration: none; /* Elimina subrayado */
+    margin-left: 20px; /* Margen a la izquierda de los links */
+    padding: 7px 10px; /* Espaciado interno de los links */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves para hover */
+}
+
+.header__nav-link:hover {
+    background-color: var(--color-navegador); /* Color de fondo al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados en hover */
+    box-shadow: 5px 5px 8px var(--color-detalles); /* Sombra al pasar el mouse */
+}
+
+/* Estilos Slider (Carrusel) */
+.hero-section {
+    flex: 1; /* Deja que esta sección ocupe el espacio disponible */
+    display: flex; /* Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 15px 0; /* Margen superior e inferior */
+    cursor: pointer; /* Indica que es interactivo */
+    position: relative; /* Contexto para posicionamientos internos */
+}
+
+.hero-section__slider {
+    flex: 1; /* Permite que el slider ocupe el espacio disponible */
+    max-width: 800px; /* Ancho máximo del slider */
+    max-height: 400px; /* Altura máxima del slider */
+    overflow: hidden; /* Oculta contenido que desborda */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 5px 5px 8px var(--color-detalles); /* Sombra del slider */
+}
+
+.hero-section__slides {
+    display: flex; /* Flexbox para los slides */
+    align-items: center; /* Centra verticalmente los slides */
+    transition: transform 0.5s ease; /* Transición suave para movimiento de slides */
+}
+
+.hero-section__slide {
+    min-width: 100%; /* Cada slide ocupa el 100% del ancho */
+}
+
+.hero-section__slide-img {
+    width: 100%; /* Imagen ocupa todo el ancho del slide */
+    height: 100%; /* Imagen ocupa toda la altura del slide */
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen y cubre el contenedor */
+}
+
+/* Estilos Main */
+.main-content {
+    padding: 0rem 1rem 1rem 1rem; /* Espaciado del contenido principal */
+}
+
+.main-content__titulo {
+    text-align: center; /* Centra el título del contenido principal */
+    color: var(--color-detalles); /* Color del texto */
+    margin: 2rem 0; /* Margen superior e inferior */
+}
+
+.main-content__pilares {
+    display: grid; /* Cambiar a grid para los pilares */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espaciado entre pilares */
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+.main-content__pilar {
+    text-align: center; /* Centra el texto del pilar */
+    padding: 1rem; /* Espaciado interno del pilar */
+    border: 1px solid var(--color-principal); /* Borde del pilar */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 5px 5px 8px var(--color-detalles); /* Sombra del pilar */
+    background-color: var(--color-principal); /* Color de fondo del pilar */
+}
+
+.main-content__texto,
+.main-content__icon {
+    color: var(--color-detalles); /* Color del texto e iconos */
+}
+
+.main-content__icon:hover {
+    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+    transform: translateY(-5px); /* Eleva el pilar al pasar el ratón */
+}
+
+/* Estilo Articulo*/
+.article {
+    padding: 0 0 1rem 0;
+    &__content {
+        display: grid;
+        grid-template-columns: 0.3fr 2fr 2fr 0.3fr; // Ajusta la proporción según sea necesario
+        gap: 20px; // Espacio entre la imagen y el texto
+        align-items: center; // Centra verticalmente el contenido
+        text-align: center; // Centra el texto horizontalmente
+    }
+
+    &__image-wrapper {
+        height: 350px; // Altura fija del contenedor
+
+        grid-column: 2; // Coloca la imagen en la segunda columna
+        display: flex; // Flexbox para centrar la imagen
+        justify-content: center; // Centra horizontalmente
+        align-items: center; // Centra verticalmente
+        overflow: hidden; // Asegura que el contenido no sobresalga
+        border-radius: 10px; // Bordes redondeados
+        box-shadow: 5px 5px 8px var(--color-detalles); // Sombra
+    }
+
+    &__img {
+        width: 100%; // Asegura que la imagen ocupe todo el ancho del contenedor
+        height: 100%; // Mantiene la proporción de la imagen
+        max-height: 100%; // Asegura que la imagen no exceda la altura del contenedor
+        object-fit: cover; // Mantiene la relación de aspecto de la imagen y cubre el contenedor
+        display: flex;
+        align-items: end;
+
+    }
+
+    &__paragraph {
+        margin: 0; // Elimina márgenes por defecto
+        grid-column: 3; // Coloca el texto en la tercera columna
+        display: flex; // Flexbox para centrar el texto
+        flex-direction: column; // Coloca el título sobre el texto
+        justify-content: flex-start; // Alinea al inicio
+        align-items: center; // Centra horizontalmente
+        overflow: hidden; // Asegura que el contenido no sobresalga
+    }
+    &__titulo{
+        font-size: 1.5rem; // Tamaño de fuente para el título
+        margin: 0.5rem 0; // Margen superior e inferior
+        color: var(--color-detalles); // Color del texto
+        text-align: center; // Centra el texto
+    }
+
+    &__text {
+        font-size: 1rem; // Ajusta el tamaño de fuente según sea necesario
+        line-height: 1.2; // Mejora la legibilidad
+        text-align: center; // Centra el texto
+        color: var(--color-detalles);
+    }
+}
+
+
+
+/* Fin Estilo Articulo*/
+
+/* Estilo Footer */
+.footer {
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0px 0px 8px 5px var(--color-detalles); /* Sombra del footer */
+    background-color: var(--color-principal); /* Color de fondo del footer */
+    color: var(--color-detalles); /* Color del texto */
+    text-align: center; /* Centra el texto en el footer */
+    padding: 20px 0; /* Espaciado interno del footer */
+}
+
+.footer__logo {
+    height: 40px; /* Altura del logo en el footer */
+    margin-bottom: 10px; /* Margen inferior del logo */
+}
+
+/* Media Queries */
+@media (max-width: 838px) {
+    .header {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra elementos en la columna */
+        text-align: center; /* Centra el texto */
+    }
+
+    .header__nav {
+        justify-content: center; /* Centra los links de navegación */
+        margin-top: 10px; /* Margen superior para separación */
+    }
+
+    .header__nav-link {
+        margin: 5px; /* Margen para los links de navegación */
+        text-align: center; /* Centra el texto de los links */
+    }
+
+    .main-content__pilares {
+        grid-template-columns: 1fr; /* Coloca pilares en columna en móviles */
+    }
+
+    .article__content {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        text-align: center; /* Centra el texto horizontalmente */
+    }
+
+    .article__image-wrapper {
+        grid-column: 1; /* Coloca la imagen en la primera columna */
+        margin-bottom: 1rem; /* Añade margen inferior para separación */
+    }
+
+    .article__paragraph {
+        grid-column: 1; /* Asegura que el texto esté en la primera columna */
+    }
+}
+
