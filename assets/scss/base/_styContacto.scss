@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: "Bangers", system-ui;
+    background-color: var(--color-secundario);
+}
+
+.header {
+    background-color: var(--color-principal);
+    padding: 20px;
+    text-align: center;
+
+    &__logo {
+        height: 50px;
+    }
+
+    &__titulo {
+        color: var(--color-detalles);
+    }
+}
+
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+
+    &__titulo {
+        margin-bottom: 20px;
+        color: var(--color-detalles);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--color-detalles);
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    &__textarea {
+        resize: vertical;
+    }
+
+    &__submit-button {
+        background-color: var(--color-principal);
+        color: var(--color-detalles);
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: var(--color-navegador);
+        }
+    }
+}
+
+.footer {
+    background-color: var(--color-principal);
+    color: var(--color-detalles);
+    text-align: center;
+    padding: 10px 0;
+
+    &__text {
+        margin: 0;
+    }
+}

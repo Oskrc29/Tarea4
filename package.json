@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "scss:compile": "sass assets/scss/main.scss assets/css/styles.css --watch"
+    "scss:compile": "sass assets/scss/main.scss assets/css/styles.css --watch",
+    "scssConctacto:compile": "sass assets/scss/main.scss assets/css/stylesContacto.css --watch"
   },
   "keywords": [],
   "author": "",
