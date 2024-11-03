@@ -13,43 +13,55 @@
 
 <body>
     <main class="layout">
-        <header class="layout__section header">
+        <header class="header">
             <img src="assets/imagenes/LogoPizza.png" alt="Logo de la empresa" class="header__logo">
             <h1 class="header__titulo">Bienvenido a Pizzas' Sanku</h1>
-            <nav class="layout__section header__nav" role="navigation">
-                <a href="#inicio" class="header__nav-link">Inicio</a>
-                <a href="#servicios" class="header__nav-link">Servicios</a>
+            <nav class="header__nav" role="navigation">
+                <a href="index.html" class="header__nav-link">Inicio</a>
+                <a href="servicios.html" class="header__nav-link">Servicios</a>
                 <a href="#sobre-nosotros" class="header__nav-link">Sobre Nosotros</a>
                 <a href="#contacto" class="header__nav-link">Contacto</a>
             </nav>
         </header>
 
-        <section class="layout__section services"> <!-- Sección de servicios -->
+        <section class="services"> <!-- Sección de servicios -->
             <h2 class="services__titulo">Nuestros Servicios</h2>
-            <article class="services__item">
-                <h3 class="services__item-titulo">Pizza Clásica</h3>
-                <p class="services__item-texto">Disfruta de nuestra pizza clásica, elaborada con los mejores ingredientes y un toque especial.</p>
-            </article>
-            <article class="services__item">
-                <h3 class="services__item-titulo">Pizza Vegetariana</h3>
-                <p class="services__item-texto">Una deliciosa opción vegetariana, repleta de verduras frescas y sabores únicos.</p>
-            </article>
-            <article class="services__item">
-                <h3 class="services__item-titulo">Pizza Gourmet</h3>
-                <p class="services__item-texto">Para los más exigentes, nuestra pizza gourmet combina ingredientes de alta calidad en cada bocado.</p>
-            </article>
-            <article class="services__item">
-                <h3 class="services__item-titulo">Servicio a Domicilio</h3>
-                <p class="services__item-texto">Disfruta de nuestras pizzas en la comodidad de tu hogar con nuestro servicio a domicilio.</p>
+            <article class="services__article"> <!-- Sección del artículo -->
+                <figure class="services__article-content">
+                    <span class="services__article-image-wrapper art-1__aiw">
+                        <img src="assets/imagenes/Article_Image1.jpg" alt="Imagen de Articulo" class="services__article-img">
+                    </span>
+                    <figcaption class="services__article-paragraph art-1__ap">
+                        <h3 class="services__article-titulo">Rodizio de Pizza</h3>
+                        <p class="services__article-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore minima maiores suscipit sequi placeat sit earum, iusto magni reiciendis ipsa velit similique laudantium voluptate nobis animi eaque? Aperiam, commodi sint!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, optio. Nemo rem, veniam delectus sunt voluptatum voluptatibus ullam fuga? Aliquam ratione ipsum doloremque molestiae unde eligendi vitae dolores facere earum!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id obcaecati corrupti ducimus error esse sit distinctio, eos debitis deleniti assumenda! Beatae labore nam odit cumque doloribus dolorem quaerat error sint.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique qui perspiciatis a quae, eaque quod, ab quia quisquam nesciunt sapiente vero laudantium soluta ea? Beatae atque voluptas nobis dolores? 
+                        </p>
+                    </figcaption>
+                    <span class="services__article-image-wrapper art-2__aiw">
+                        <img src="assets/imagenes/Article_Image2.jpeg" alt="Imagen de Articulo" class="services__article-img">
+                    </span>
+                    <figcaption class="services__article-paragraph art-2__ap">
+                        <h3 class="services__article-titulo">Food Truck Party</h3>
+                        <p class="services__article-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore minima maiores suscipit sequi placeat sit earum, iusto magni reiciendis ipsa velit similique laudantium voluptate nobis animi eaque? Aperiam, commodi sint!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, optio. Nemo rem, veniam delectus sunt voluptatum voluptatibus ullam fuga? Aliquam ratione ipsum doloremque molestiae unde eligendi vitae dolores facere earum!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id obcaecati corrupti ducimus error esse sit distinctio, eos debitis deleniti assumenda! Beatae labore nam odit cumque doloribus dolorem quaerat error sint.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique qui perspiciatis a quae, eaque quod, ab quia quisquam nesciunt sapiente vero laudantium soluta ea? Beatae atque voluptas nobis dolores? 
+                        </p>
+                    </figcaption>
+                </figure>
             </article>
         </section>
 
     </main>
 
-    <section class="layout__section footer">
+    <footer class="footer">
         <img src="assets/imagenes/LogoPizza.png" alt="Logo de la empresa" class="footer__logo">
         <p class="footer__texto">&copy; 2024 Pizza's Sanku. Todos los derechos reservados.</p>
-    </section>
+    </footer>
 
     <script src="assets/script/script.js"></script>
 </body>

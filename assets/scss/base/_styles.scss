@@ -136,22 +136,31 @@ body {
     transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
     transform: translateY(-5px); /* Eleva el pilar al pasar el ratón */
 }
+/* Estilos Servicios */
+
+.services__titulo{
+    display: flex;
+    justify-content: center;
+    color: var(--color-detalles);
+
+}
 
 /* Estilo Articulo*/
-.article {
-    padding: 0 0 1rem 0;
-    &__content {
+.services {
+    padding: 0 var(--espaciado-base) 1rem;
+    position: relative;
+
+    &__article-content {
         display: grid;
-        grid-template-columns: 0.3fr 2fr 2fr 0.3fr; // Ajusta la proporción según sea necesario
+        grid-template-columns: .1fr 2fr 2fr .1fr; // Ajusta la proporción según sea necesario
         gap: 20px; // Espacio entre la imagen y el texto
         align-items: center; // Centra verticalmente el contenido
         text-align: center; // Centra el texto horizontalmente
     }
 
-    &__image-wrapper {
-        height: 350px; // Altura fija del contenedor
-
-        grid-column: 2; // Coloca la imagen en la segunda columna
+    &__article-image-wrapper {
+        min-width: 100%;
+        height: 350px; // Altura fija del contenedor 
         display: flex; // Flexbox para centrar la imagen
         justify-content: center; // Centra horizontalmente
         align-items: center; // Centra verticalmente
@@ -160,38 +169,56 @@ body {
         box-shadow: 5px 5px 8px var(--color-detalles); // Sombra
     }
 
-    &__img {
+    &__article-img {
         width: 100%; // Asegura que la imagen ocupe todo el ancho del contenedor
         height: 100%; // Mantiene la proporción de la imagen
         max-height: 100%; // Asegura que la imagen no exceda la altura del contenedor
+        max-height: 100%;
         object-fit: cover; // Mantiene la relación de aspecto de la imagen y cubre el contenedor
         display: flex;
-        align-items: end;
-
     }
 
-    &__paragraph {
+    &__article-paragraph {
         margin: 0; // Elimina márgenes por defecto
-        grid-column: 3; // Coloca el texto en la tercera columna
+        
         display: flex; // Flexbox para centrar el texto
         flex-direction: column; // Coloca el título sobre el texto
         justify-content: flex-start; // Alinea al inicio
         align-items: center; // Centra horizontalmente
         overflow: hidden; // Asegura que el contenido no sobresalga
     }
-    &__titulo{
+
+    &__article-titulo {
         font-size: 1.5rem; // Tamaño de fuente para el título
         margin: 0.5rem 0; // Margen superior e inferior
         color: var(--color-detalles); // Color del texto
-        text-align: center; // Centra el texto
+        display: flex;
+        justify-items: flex-start; // Centra el texto
     }
 
-    &__text {
+    &__article-text {
         font-size: 1rem; // Ajusta el tamaño de fuente según sea necesario
         line-height: 1.2; // Mejora la legibilidad
         text-align: center; // Centra el texto
         color: var(--color-detalles);
     }
+    .art-1__aiw{
+        grid-column: 2; // Coloca la imagen en la segunda columna
+        grid-row: 1;
+    }
+    .art-1__ap{
+        grid-column: 3; // Coloca el texto en la tercera columna
+        grid-row: 1;
+    }
+    .art-2__aiw{
+        grid-column: 3; // Coloca la imagen en la segunda columna
+        grid-row: 2;
+    }
+    .art-2__ap{
+        grid-column: 2; // Coloca el texto en la tercera columna
+        grid-row: 2;
+    }
+
 }
 
 
@@ -235,18 +262,30 @@ body {
         grid-template-columns: 1fr; /* Coloca pilares en columna en móviles */
     }
 
-    .article__content {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-        text-align: center; /* Centra el texto horizontalmente */
+    .services__article-content {
+        display: flex; /* Cambia a flexbox para columna */
+        flex-direction: column; /* Organiza los artículos en columna */
+        gap: 20px; /* Espacio entre artículos */
+        text-align: center; /* Centra el texto */
     }
 
-    .article__image-wrapper {
-        grid-column: 1; /* Coloca la imagen en la primera columna */
-        margin-bottom: 1rem; /* Añade margen inferior para separación */
+    .services__article-image-wrapper {
+        margin-bottom: 1rem; /* Margen inferior para separación */
     }
 
-    .article__paragraph {
-        grid-column: 1; /* Asegura que el texto esté en la primera columna */
+    .services__article-paragraph {
+        margin: 0; /* Elimina márgenes por defecto */
+        text-align: center; /* Asegura que el texto esté centrado */
+    }
+
+    .services__article-text {
+        font-size: 10px; /* Ajusta el tamaño de texto si es necesario */
+    }
+
+    /* Otros ajustes si es necesario */
+    .footer {
+        text-align: center; /* Centra el texto en el footer */
+        padding: 10px; /* Ajusta el espaciado */
     }
 }
 
